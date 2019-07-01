@@ -77,8 +77,8 @@ class deepxi_net:
 		self.training_ph = tf.placeholder(tf.bool, name='training_ph') # training placeholder.
 
 		## A PRIORI SNR IN DB STATISTICS
-		args.mu = tf.constant(args.mu_mat['mu'], dtype=tf.float32) 
-		args.sigma = tf.constant(args.sigma_mat['sigma'], dtype=tf.float32) 
+		self.mu = tf.constant(args.mu_mat['mu'], dtype=tf.float32) 
+		self.sigma = tf.constant(args.sigma_mat['sigma'], dtype=tf.float32) 
 
 		## FEATURE GRAPH
 		print('Preparing graph...')
@@ -226,8 +226,8 @@ def infer(sess, net, args):
 	net.saver.restore(sess, args.model_path + '/epoch-' + str(args.epoch)) # load model from epoch.
 
 	## CONVERT STATISTIC CONSTANTS TO NUMPY ARRAY
-	mu_np = sess.run(args.mu); # place mean constant into a numpy array.
-	sigma_np = sess.run(args.sigma); # place standard deviation constant into a numpy array.
+	mu_np = sess.run(net.mu); # place mean constant into a numpy array.
+	sigma_np = sess.run(net.sigma); # place standard deviation constant into a numpy array.
 
 	for j in range(len(args.test_x_len)):
 		x_MS_out = sess.run(net.x_MS, feed_dict={net.x_ph: [args.test_x[j]], 
