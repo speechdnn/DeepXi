@@ -35,7 +35,7 @@ The ResLSTM and ResBLSTM networks used for Deep Xi in [1] have been replaced wit
 
 |![](./fig_tcn.gif "Deep Xi a priori SNR estimator.")|
 |----|
-| <p align="center"> <b>Figure 2:</b> <a> TCN </a> <i> a priori</i>  <a> SNR estimator.</a> </p> |
+| <p align="center"> <b>Figure 2:</b> <a> TCN </a> <i> a priori</i>  <a> SNR estimator. (NOTE: the filter size for the first conv unit should be 64).</a> </p> |
 
 <!--
 Trained models for **c2.7a** and **c1.13a** can be found in the *./model* directory. The trained model for **n1.9a** is to large to be stored on github. A model for **n1.9a** can be downloaded from [here](https://www.dropbox.com/s/wkhymfmx4qmqvg7/n1.5a.zip?dl=0). 
