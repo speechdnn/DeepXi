@@ -106,6 +106,22 @@ The following noise datasets were used:
 * The noise set from the MUSAN corpus, which can be found [here](http://www.openslr.org/17/).
 * Multiple packs from the FreeSound website, which can be found  [here](https://freesound.org/)
 
+
+## Citation
+If you find this repository helpful in your resarch or work, please use the following citation:
+```
+@article{NICOLSON201944,
+title = "Deep learning for minimum mean-square error approaches to speech enhancement",
+journal = "Speech Communication",
+volume = "111",
+pages = "44 - 55",
+year = "2019",
+issn = "0167-6393",
+doi = "https://doi.org/10.1016/j.specom.2019.06.002",
+url = "http://www.sciencedirect.com/science/article/pii/S0167639318304308",
+author = "Aaron Nicolson and Kuldip K. Paliwal",
+}
+
 References
 -----
 Please cite the following when using Deep Xi:
