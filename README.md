@@ -119,7 +119,7 @@ year = "2019",
 issn = "0167-6393",
 doi = "https://doi.org/10.1016/j.specom.2019.06.002",
 url = "http://www.sciencedirect.com/science/article/pii/S0167639318304308",
-author = "Aaron Nicolson and Kuldip K. Paliwal",
+author = "Aaron Nicolson and Kuldip K. Paliwal"
 }
 ```
 
