@@ -84,7 +84,7 @@ class deepxi_net:
 		print('Preparing graph...')
 		self.P = tf.reduce_max(self.s_len_ph) # padded waveform length.
 		self.feature = feat.xi_mapped(self.s_ph, self.d_ph, self.s_len_ph, self.d_len_ph, self.snr_ph, args.Nw, args.Ns, args.NFFT, 
-			args.fs, self.P, args.nconst, args.mu, args.sigma) # feature graph.
+			args.fs, self.P, args.nconst, self.mu, self.sigma) # feature graph.
 
 		## RESNET
 		self.output = residual.Residual(self.x_MS_ph, self.x_MS_len_ph, self.keep_prob_ph, 
