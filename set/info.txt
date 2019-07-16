@@ -3,14 +3,16 @@ Sets used for training.
 For the validation set only:
 
   Identical filenames for the clean speech and noise must be placed in 'val_clean_speech' 
-  and 'val_noise', with the SNR at the end of the filename. The format of the filename is: 
-  'x_y_zdB', where 'x' is the clean speech, 'y' is the noise source and z is the SNR level. 
-  The clean speech and noise will be mixed together at the SNR level specified in the filename
+  and 'val_noise', with the SNR at the end of the filename. The format of the filenames is: 
+  'x_y_zdB.wav', where 'x' is the clean speech name, 'y' is the noise source name and 'z' is the SNR level. 
+  The clean speech and noise will be mixed together at the SNR level specified in the filename during 
+   validation
 
   As an example:
   './val_clean_speech/198_19-198-0003_Machinery17_15dB.wav' contains the clean speech, 
-  and './val_noise/198_19-198-0003_Machinery17_15dB.wav' contains the noise. The number 
-  of samples in each must be identical. 
+  and './val_noise/198_19-198-0003_Machinery17_15dB.wav' contains the noise.
+  
+  Please note that the number of samples in the clean speech and noise must be identical.
 
   This must be done, as the clean speech and noise used to create the noisy speech 
   (noisy speech = clean speech + noise) are required to compute the a priori SNR target.
