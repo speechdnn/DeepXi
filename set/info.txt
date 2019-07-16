@@ -6,7 +6,7 @@ For the validation set only:
   and 'val_noise', with the SNR at the end of the filename. The format of the filenames is: 
   'x_y_zdB.wav', where 'x' is the clean speech name, 'y' is the noise source name and 'z' is the SNR level. 
   The clean speech and noise will be mixed together at the SNR level specified in the filename during 
-   validation
+  validation
 
   As an example:
   './val_clean_speech/198_19-198-0003_Machinery17_15dB.wav' contains the clean speech, 
