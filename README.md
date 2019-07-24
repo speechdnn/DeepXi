@@ -17,7 +17,7 @@ Deep Xi: A Deep Learning Approach to *A Priori* SNR Estimation. Used for Speech 
 
 |![](./fig_front-end.png "Deep Xi as a front-end for robust ASR.")|
 |----|
-| <p align="center"> <b>Figure 1:</b> Deep Xi used as a front-end for robust ASR. The back-end (Deep Speech) is available <a href="https://github.com/mozilla/DeepSpeech">here</a>. The noisy speech magnitude spectrogram, as shown in <b>(a)</b>, is a mixture of clean speech with <i>voice babble</i> noise at an SNR level of -5 dB, and is the input to Deep Xi. Deep Xi estimates the <i>a priori</i> SNR, as shown in <b>(b)</b>. The <i>a priori</i> SNR estimate is used to compute an MMSE approach gain function, which is multiplied elementwise with the noisy speech magnitude spectrum to produce the clean speech magnitude spectrum estimate, as shown in <b>(c)</b>. <a href="https://github.com/anicolson/matlab_feat">MFCCs</a> are computed from the estimated clean speech magnitude spectrogram, producing the estimated clean speech cepstrogram, as shown in <b>(d)</b>. The back-end system, Deep Speech, computes the hypothesis transcript, from the estimated clean speech cepstrogram, as shown in <b>(e)</b>. </p> |
+| <p align="center"> <b>Figure 1:</b> href="https://arxiv.org/abs/1906.07319">Deep Xi used as a front-end for robust ASR</a>. The back-end (Deep Speech) is available <a href="https://github.com/mozilla/DeepSpeech">here</a>. The noisy speech magnitude spectrogram, as shown in <b>(a)</b>, is a mixture of clean speech with <i>voice babble</i> noise at an SNR level of -5 dB, and is the input to Deep Xi. Deep Xi estimates the <i>a priori</i> SNR, as shown in <b>(b)</b>. The <i>a priori</i> SNR estimate is used to compute an MMSE approach gain function, which is multiplied elementwise with the noisy speech magnitude spectrum to produce the clean speech magnitude spectrum estimate, as shown in <b>(c)</b>. <a href="https://github.com/anicolson/matlab_feat">MFCCs</a> are computed from the estimated clean speech magnitude spectrogram, producing the estimated clean speech cepstrogram, as shown in <b>(d)</b>. The back-end system, Deep Speech, computes the hypothesis transcript, from the estimated clean speech cepstrogram, as shown in <b>(e)</b>. </p> |
 
 
 <!-- |![](./fig_reslstm.png "ResLSTM a priori SNR estimator.")|
@@ -31,7 +31,7 @@ Deep Xi: A Deep Learning Approach to *A Priori* SNR Estimation. Used for Speech 
 
 Current Models
 -----
-The ResLSTM and ResBLSTM networks used for Deep Xi in [1] have been replaced with a Residual Network that employs [causal dilated convolutional units](https://arxiv.org/pdf/1803.01271.pdf), otherwise known as a [temporal convolutional network (TCN)](https://arxiv.org/pdf/1803.01271.pdf). The Deep Xi network can be seen in **Figure 2**. It comprises of 2 million parameters.
+The ResLSTM and ResBLSTM networks used for Deep Xi in [1] (Deep Xi - ResLSTM and Deep Xi - ResBSLTM) have been replaced with a residual network (ResNet) that employs [causal dilated convolutional units](https://arxiv.org/pdf/1803.01271.pdf), otherwise known as a [temporal convolutional network (TCN)](https://arxiv.org/pdf/1803.01271.pdf). Deep Xi - ResNet can be seen in **Figure 2**. It comprises of 2 million parameters.
 
 |![](./fig_tcn.gif "Deep Xi a priori SNR estimator.")|
 |----|
