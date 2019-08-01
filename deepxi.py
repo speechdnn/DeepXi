@@ -263,7 +263,7 @@ def infer(sess, net, args):
 			if not os.path.exists(args.out_path + '/y/' + args.gain): os.makedirs(args.out_path + '/y/' + args.gain) # make output directory.
 			y_out = sess.run(net.y, feed_dict={net.G_ph: gain_out, net.x_PS_ph: x_PS_out, net.x_MS_2D_ph: x_MS_out, 
 				net.output_ph: output_out}) # enhanced speech output.	
-			if isinstance(y_out, np.float32): y_out = np.asarray(np.multiply(y_out, 32768.0), dtype=np.int16)
+			if isinstance(y_out[0], np.float32): y_out = np.asarray(np.multiply(y_out, 32768.0), dtype=np.int16)
 			scipy.io.wavfile.write(args.out_path + '/y/' + args.gain + '/' + args.test_fnames[j] + '.wav', args.fs, y_out)
 
 		print("Inference (%s): %3.2f%%.       " % (args.out_type, 100*((j+1)/len(args.test_x_len))), end="\r")
